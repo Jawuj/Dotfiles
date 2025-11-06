@@ -1,0 +1,17 @@
+window {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+}
+
+entry {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+}
+
+entry:selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}

@@ -1,0 +1,3 @@
+style = ~/.config/wofi/style.css
+location = center
+width = 400
