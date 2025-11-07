@@ -1,0 +1,36 @@
+[config]
+
+[templates.hyprland]
+input_path = '/home/jawuj/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '/home/jawuj/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+
+[templates.kitty]
+input_path = '/home/jawuj/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.rofi]
+input_path = '/home/jawuj/.config/matugen/templates/colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/cavamatugen'
+post_hook = "pkill -USR1 cava"
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+# Spicetify
+[templates.spicetify]
+input_path = '~/.config/matugen/templates/spotify-colors.ini'
+output_path = '~/.config/spicetify/Themes/Comfy/color.ini'
+
+[templates.yazi]
+input_path = '/home/jawuj/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
