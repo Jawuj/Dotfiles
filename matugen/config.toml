@@ -12,9 +12,10 @@ output_path = '~/.config/waybar/colors.css'
 [templates.kitty]
 input_path = '/home/jawuj/.config/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
+post_hook = 'kitten themes --reload-in=all matugen'
 
 [templates.rofi]
-input_path = '/home/jawuj/.config/matugen/templates/colors.rasi'
+input_path = '/home/jawuj/.con}fig/matugen/templates/colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
 
 [templates.cava]
@@ -26,13 +27,15 @@ post_hook = "pkill -USR1 cava"
 input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 
-# Spicetify
 [templates.spicetify]
 input_path = '~/.config/matugen/templates/spotify-colors.ini'
 output_path = '~/.config/spicetify/Themes/text/color.ini'
-post_hook = "spicetify apply"
-
 
 [templates.yazi]
 input_path = '/home/jawuj/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+[templates.discord]
+input_path = '~/.config/matugen/templates/Material-Discord.theme.css'
+output_path = '~/.config/Vencord/themes/Material-Discord.theme.css'
+
