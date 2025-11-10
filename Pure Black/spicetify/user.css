@@ -1,0 +1,455 @@
+/*  ================================
+   ROOT
+   ================================ */
+
+/* import */
+/* find more in https://fonts.google.com/?category=Monospace&sort=popularity */
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Cutive+Mono&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=M+PLUS+1+Code:wght@100..700&family=Nova+Mono&family=Overpass+Mono:wght@300..700&family=Oxygen+Mono&family=PT+Mono&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Sono:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&family=Xanh+Mono:ital@0;1&display=swap");
+@import url("https://fonts.cdnfonts.com/css/asciid");
+
+/* user settings */
+:root {
+   --font-family: "JetBrains Mono", monospace;
+   /*
+   --font-family: 'Anonymous Pro', monospace;
+   --font-family: 'Azeret Mono', monospace;
+   --font-family: 'B612 Mono', monospace;
+   --font-family: 'Courier Prime', monospace;
+   --font-family: 'Cousine', monospace;
+   --font-family: 'Cutive Mono', monospace;
+   --font-family: 'DM Mono', monospace;
+   --font-family: 'Fira Code', monospace;
+   --font-family: 'Fira Mono', monospace;
+   --font-family: 'IBM Plex Mono', monospace;
+   --font-family: 'JetBrains Mono', monospace;
+   --font-family: 'M PLUS 1 Code', monospace;
+   --font-family: 'Major Mono Display', monospace;
+   --font-family: 'Monofett', monospace;
+   --font-family: 'Nova Mono', monospace;
+   --font-family: 'Overpass Mono', monospace;
+   --font-family: 'Oxygen Mono', monospace;
+   --font-family: 'PT Mono', monospace;
+   --font-family: 'Roboto Mono', monospace;
+   --font-family: 'Share Tech Mono', monospace;
+   --font-family: 'Sometype Mono', monospace;
+   --font-family: 'Sono', monospace;
+   --font-family: 'Source Code Pro', monospace;
+   --font-family: 'Space Mono', monospace;
+   --font-family: 'Syne Mono', monospace;
+   --font-family: 'Ubuntu Mono', monospace;
+   --font-family: 'VT323', monospace;
+   --font-family: 'Xanh Mono', monospace;
+   */
+   --font-size: 14px;
+   --font-weight: 400; /* 200 : 900 */
+   --line-height: 1.2;
+
+   --font-size-lyrics: 14px; /* 1.5em (default) */
+
+   --font-family-header: "asciid";
+   --font-size-multiplier-header: 4;
+
+   --display-card-image: block; /* none | block */
+   --display-coverart-image: none; /* none | block */
+   --display-header-image: none; /* none | block */
+   --display-sidebar-image: block; /* none | block */
+   --display-tracklist-image: none; /* none | block */
+   --display-spicetify-banner-ascii: block; /* none | block */
+   --display-music-banner-ascii: none; /* none | block */
+
+   --border-radius: 0px;
+   --border-width: 1px;
+   --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+   --border-transition: 0.2s ease; /* 'none' to disable  */
+
+   --global-nav-margin-top: 40px; /* set to '0px' if you disabled window controls */
+   --spice-main: #000000;
+}
+
+/* font */
+*:not([style*="lyric" i] *, [class*="lyric" i], .main-entityHeader-title) {
+   font-family: var(--font-family) !important;
+   font-size: var(--font-size) !important;
+   font-weight: var(--font-weight) !important;
+   line-height: var(--line-height) !important;
+}
+.lyrics-lyrics-container *,
+.main-nowPlayingView-lyricsContent * {
+   font-family: var(--font-family);
+   font-size: var(--font-size-lyrics);
+   font-weight: var(--font-weight);
+   line-height: var(--line-height);
+}
+.main-entityHeader-title h1,
+.main-entityHeader-title span {
+   font-family: var(--font-family-header) !important;
+   font-size: calc(
+       var(--font-size) * var(--font-size-multiplier-header)
+   ) !important;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   line-clamp: 2;
+}
+
+/* images */
+.main-card-imageContainer img,
+.view-homeShortcutsGrid-imageContainer img {
+   display: var(--display-card-image) !important;
+}
+.main-coverSlotCollapsed-container {
+   display: var(--display-coverart-image);
+}
+.main-entityHeader-imageContainer,
+.under-main-view,
+.main-entityHeader-creatorWrapper .main-avatar-avatar,
+.main-entityHeader-imageContainer,
+.playlist-playlist-playlistImageContainer,
+.profile-userOverview-imageContainer {
+   display: var(--display-header-image);
+}
+.x-entityImage-imageContainer img,
+.main-avatar-image {
+   display: var(--display-sidebar-image);
+}
+.main-trackList-rowImage {
+   display: var(--display-tracklist-image);
+}
+
+/* fix */
+.Root__globalNav {
+   padding: 8px 16px !important;
+   height: unset;
+}
+.spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav,
+.spotify__container--is-desktop.spotify__os--is-macos .Root__globalNav {
+   margin: 0;
+   margin-top: var(--global-nav-margin-top);
+}
+.spotify__container--is-desktop.spotify__os--is-linux .Root__globalNav {
+   margin: 8px 0 0;
+}
+.Root__top-container {
+   --panel-gap: 16px !important;
+}
+.Root__top-bar {
+   border: var(--border-width) solid transparent;
+}
+.Root__nav-bar,
+.main-nowPlayingBar-container {
+   overflow: visible;
+}
+.main-view-container {
+   overflow: hidden;
+}
+section:has(> .main-entityHeader-container),
+div:has(> .main-entityHeader-container) {
+   margin-top: 0;
+}
+.main-entityHeader-container {
+   height: unset !important;
+   min-height: unset !important;
+}
+.main-entityHeader-imageContainerNew {
+   height: 128px;
+   width: 128px;
+}
+.main-topBar-overlay,
+.main-entityHeader-container > div,
+.main-entityHeader-container + div[style*="background-color"],
+.main-entityHeader-container + div > div[style*="background-color"],
+.main-home-homeHeader,
+.main-nowPlayingView-contextItemInfo::before {
+   background-color: #000000 !important;
+   background-image: none !important;
+   background: #000000 !important;
+   transition: unset !important;
+}
+.main-topBar-background,
+.main-home-filterChipsSection,
+.main-home-filterChipsSection::after,
+.main-trackList-trackListHeader,
+.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader,
+.main-entityHeader-container + div,
+.main-entityHeader-container + div > div {
+   background-color: #000000 !important;
+   background: #000000 (--spice-main);
+   transition: unset !important;
+}
+.LayoutResizer__resize-bar {
+   cursor: w-resize;
+}
+.LayoutResizer__inline-end:after,
+.LayoutResizer__inline-start:after {
+   background-color: var(--spice-border-inactive);
+}
+.LayoutResizer__resize-bar--resizing.LayoutResizer__inline-start:after,
+.LayoutResizer__resize-bar--resizing.LayoutResizer__inline-end:after {
+   background-color: var(--spice-border-active);
+}
+div[class*="minBlockSize_56px-padding_8px"] {
+   padding: 4px !important;
+}
+.main-trackList-number {
+   top: 0;
+}
+
+/* fullscreen */
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art,
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
+   bottom: 18em;
+}
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art {
+   -webkit-transform: scale(0.34375);
+   transform: scale(0.34375);
+}
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
+   -webkit-transform: none;
+   transform: none;
+}
+.npv-main-container .playback-bar {
+   position: unset;
+   width: auto;
+}
+.npv-nowPlayingBar-controls {
+   height: auto;
+}
+
+/* recolor */
+:root {
+   --spice-main-elevated: var(--spice-main);
+   --spice-highlight-elevated: var(--spice-main);
+   --spice-sidebar: var(--spice-main);
+   --spice-player: var(--spice-main);
+   --spice-card: var(--spice-main);
+   --spice-shadow: var(--spice-main);
+   --spice-selected-row: var(--spice-subtext);
+   --spice-button: var(--spice-accent);
+   --spice-button-active: var(--spice-accent-active);
+   --spice-button-disabled: var(--spice-accent-inactive);
+   --spice-tab-active: var(--spice-main);
+   --spice-rgb-main-elevated: var(--spice-rgb-main);
+   --spice-rgb-highlight-elevated: var(--spice-rgb-main);
+   --spice-rgb-sidebar: var(--spice-rgb-main);
+   --spice-rgb-player: var(--spice-rgb-main);
+   --spice-rgb-card: var(--spice-rgb-main);
+   --spice-rgb-shadow: var(--spice-rgb-main);
+   --spice-rgb-selected-row: var(--spice-rgb-subtext);
+   --spice-rgb-button: var(--spice-rgb-accent);
+   --spice-rgb-button-active: var(--spice-rgb-accent-active);
+   --spice-rgb-button-disabled: var(--spice-rgb-accent-inactive);
+   --spice-rgb-tab-active: var(--spice-rgb-main);
+}
+.encore-dark-theme,
+.encore-dark-theme .encore-base-set {
+   --background-press: var(--spice-highlight);
+   --background-elevated-press: var(--spice-main-elevated);
+   --essential-subdued: var(--spice-border-inactive);
+   --decorative-subdued: var(--spice-accent-inactive);
+}
+.encore-dark-theme .encore-bright-accent-set {
+   --background-highlight: var(--spice-button-active) !important;
+   --background-elevated-base: var(--spice-button-active) !important;
+   --background-elevated-highlight: var(--spice-button-active) !important;
+   --background-press: var(--spice-button-active) !important;
+   --background-elevated-press: var(--spice-button-active) !important;
+}
+.Root__top-container,
+.Root__nav-bar {
+   background-color: var(--spice-main);
+}
+.main-playPauseButton-button {
+   background-color: transparent;
+   color: var(--spice-subtext);
+}
+.main-playPauseButton-button:focus,
+.main-playPauseButton-button:hover {
+   transform: none;
+   color: var(--spice-text);
+}
+.view-homeShortcutsGrid-equaliser,
+.main-devicePicker-nowPlayingActiveIcon,
+.main-trackList-playingIcon {
+   filter: grayscale(1) opacity(0.2)
+       drop-shadow(0 0 0 var(--spice-button-active))
+       drop-shadow(0 0 0 var(--spice-button-active))
+       drop-shadow(0 0 0 var(--spice-button-active));
+}
+::placeholder {
+   color: var(--spice-subtext);
+}
+.main-entityHeader-background,
+.main-entityHeader-backgroundColor,
+.main-entityHeader-overlay,
+.main-actionBarBackground-background,
+.main-buddyFeed-container,
+.main-nowPlayingView-content.main-nowPlayingView-gradient {
+   background-color: transparent !important;
+   background-image: none;
+}
+.progress-bar {
+   --fg-color: var(--spice-button-active);
+   --bg-color: var(--spice-button-disabled);
+}
+.playback-bar__progress-time-elapsed,
+.main-playbackBarRemainingTime-container {
+   mix-blend-mode: difference;
+   color: var(--spice-button-active);
+}
+.main-trackList-placeholder {
+   background-color: var(--background-base);
+   background-blend-mode: color-dodge;
+}
+.main-trackList-trackListRow:focus-within,
+.main-trackList-trackListRow:hover,
+.main-contextMenu-menuItemButton:hover,
+.main-contextMenu-menuItemButton:not([aria-checked="true"]):focus,
+.main-card-card:hover,
+.main-card-card[data-context-menu-open="true"],
+[class*="listRow-isInteractive"]:hover,
+[class*="listRow-isInteractive"]:hover::after {
+   background-color: rgba(var(--spice-rgb-highlight), 0.5) !important;
+}
+.main-trackList-trackListRow.main-trackList-selected,
+.main-trackList-trackListRow.main-trackList-selected:hover {
+   background-color: var(--spice-highlight) !important;
+}
+.x-entityImage-imageContainer,
+.main-card-imageContainer > div:first-child {
+   background-color: var(--card-color, var(--spice-border-inactive));
+}
+.main-avatar-avatar {
+   background-color: var(--spice-border-inactive) !important;
+}
+.main-entityHeader-title h1,
+.main-entityHeader-title span {
+   color: var(--spice-banner);
+}
+div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
+   --text-subdued: var(--spice-subtext) !important;
+}
+.search-searchCategory-contentArea {
+   --carousel-start-chevron-gradient: var(--spice-main);
+   --carousel-end-chevron-gradient: var(--spice-main);
+}
+
+/* pane borders */
+.Root__globalNav,
+.main-yourLibraryX-entryPoints,
+.Root__main-view,
+.main-nowPlayingBar-container,
+.Root__right-sidebar:has(aside:not(:empty)) {
+   border: var(--border-width) var(--border-style);
+   border-color: var(--spice-border-inactive);
+   border-radius: var(--border-radius);
+   background-color: var(--spice-main);
+   transition: border-color var(--border-transition);
+}
+.Root__globalNav:hover,
+.main-yourLibraryX-entryPoints:hover,
+.Root__main-view:hover,
+.main-nowPlayingBar-container:hover,
+.Root__right-sidebar:has(aside:not(:empty)):hover {
+   border: var(--border-width) var(--border-style);
+   border-color: var(--spice-border-active);
+}
+
+/* pane headers */
+.Root__nav-bar .main-yourLibraryX-entryPoints {
+   overflow-x: visible !important;
+}
+.Root__globalNav::before,
+.main-globalNav-searchContainer
+   form
+   div:has(> .main-topBar-searchBar:focus)::before,
+.Root__nav-bar
+   .main-yourLibraryX-entryPoints:has(.main-yourLibraryX-navItems)::before,
+.Root__nav-bar
+   .main-yourLibraryX-entryPoints:has(
+       .main-yourLibraryX-libraryContainer
+   )::before,
+.Root__main-view::before,
+.main-nowPlayingBar-container::before,
+.Root__right-sidebar:has(aside:not(:empty))::before {
+   color: var(--spice-header);
+   position: absolute;
+   margin: -10px 4px;
+   background: var(--spice-main);
+   padding: 0 3px;
+   z-index: 3;
+   transition: color var(--border-transition);
+}
+.Root__globalNav::before {
+   content: "Nav";
+   top: 0;
+   left: 0;
+}
+.main-globalNav-searchContainer
+   form
+   div:has(> .main-topBar-searchBar:focus)::before {
+   content: "Search";
+   color: var(--spice-border-active) !important;
+}
+.Root__nav-bar
+   .main-yourLibraryX-entryPoints:has(.main-yourLibraryX-navItems)::before {
+   content: "Pages";
+}
+.Root__nav-bar
+   .main-yourLibraryX-entryPoints:has(
+       .main-yourLibraryX-libraryContainer
+   )::before {
+   content: "Library";
+}
+.Root__main-view::before {
+   content: "Main";
+   position: fixed;
+}
+.main-nowPlayingBar-container::before {
+   content: "Playing";
+}
+.Root__right-sidebar:has(aside:not(:empty))::before {
+   content: "Sidebar";
+}
+.Root__globalNav:hover::before,
+.Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
+.Root__main-view:hover::before,
+.main-nowPlayingBar-container:hover::before,
+.Root__right-sidebar:has(aside:not(:empty)):hover::before {
+   color: var(--spice-border-active);
+}
+
+/* scrollbars */
+.os-scrollbar-handle {
+   border-radius: var(--border-radius) !important;
+   width: 2px !important;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+.os-scrollbar-handle:hover {
+   border-radius: var(--border-radius) !important;
+   width: 6px !important;
+}
+.os-scrollbar-vertical {
+   top: 5px !important;
+   right: 5px !important;
+}
+
+/* context menus + tippy boxes */
+.main-contextMenu-menu,
+.tippy-box,
+#context-menu > ul,
+#context-menu > form,
+#context-menu div > ul {
+   border: var(--border-width) var(--border-style) var(--spice-border-active);
+   border-radius: var(--border-radius) !important;
+}
+
+/* modals */
+.GenericModal,
+.GenericModal__overlay > div,
+dialog {
+   border: var(--border-width) var(--border-style) var(--spice-border-active);
+   border-radius: var(--border-radius) !important;
+   overflow: visible !important;
+   box-shadow: 0 0 0 16px var
