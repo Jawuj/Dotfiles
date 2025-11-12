@@ -12,9 +12,18 @@
   </tr>
 </table>
 
-## Pure Black (Arch Base)
 
-SOON.
+## Pure Black (Arch Base)
+<table border="0">
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/Jawuj/Dotfiles/refs/heads/main/Desktops/Hyprland/Black%20Arch%20Base/desktop1.png" width="600"/></td>
+    <td><img src="https://raw.githubusercontent.com/Jawuj/Dotfiles/refs/heads/main/Desktops/Hyprland/Black%20Arch%20Base/desktop2ter.png" width="600"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/Jawuj/Dotfiles/refs/heads/main/Desktops/Hyprland/Black%20Arch%20Base/desktop3.png" width="600"/></td>
+    <td></td>
+  </tr>
+</table>
 
 
 ## Tools & Setup
