@@ -1,0 +1,55 @@
+* {
+  font-family: "CommitMono Nerd Font";
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* --- Bar --- */
+window#waybar {
+  background: rgba(0, 0, 0, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* --- Workspaces --- */
+#workspaces button {
+  background: transparent;
+  color: #b0b0b0;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin: 0 2px; /* UNIDADES CORRECTAS */
+  transition: 0.15s;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+#workspaces button.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* --- Modules (CPU, Mem, Clock, etc) --- */
+#clock,
+#cpu,
+#memory,
+#battery,
+#network,
+#tray,
+#pulseaudio {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 10px;
+  margin-left: 4px;  /* UNIDADES EXPLÍCITAS */
+  margin-right: 4px; /* ← esto evita el error */
+  border-radius: 8px;
+}
+
+#pulseaudio.muted {
+  color: #aaaaaa;
+}
+
+#battery.critical {
+  color: #ff6b6b;
+}
+
