@@ -1,0 +1,65 @@
+* {
+  font-family: "0xProto Nerd Font";
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* --- Bar --- */
+window#waybar {
+  background: rgba(0, 0, 0, 0.5); /* negro 50% transparente */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* --- Workspaces --- */
+#workspaces button {
+  background: transparent; /* negro 50% transparente */
+  color: #b0b0b0;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin: 0 2px;
+  transition: 0.15s;
+}
+
+#workspaces button:hover {
+  background: none; /* ligero efecto hover */
+}
+
+#workspaces button.active {
+  background: rgba(255, 255, 255, 0.15); /* ligero efecto activo */
+  color: #ffffff;
+}
+
+/* --- Modules (CPU, Mem, Clock, etc) --- */
+#clock,
+#cpu,
+#memory,
+#battery,
+#network,
+#tray,
+#pulseaudio {
+
+  background: transparent; 
+  padding: 6px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 8px;
+
+}
+
+/* Estados especiales */
+#pulseaudio.muted {
+  color: #aaaaaa;
+}
+
+#battery.critical {
+  color: #ff6b6b;
+}
+
+#cava {
+    font-size: 11px;     /* Ajusta el tamaño */
+    min-height: 11px;    /* Reemplaza line-height */
+    padding: 0 4px;
+    margin: 0 4px;
+    color: #ffffff;
+}
+
