@@ -1,0 +1,155 @@
+@-moz-document domain("animeonline.ninja") {
+
+  /* Fondo global transparente */
+  html, body {
+    background: transparent !important;
+  }
+
+  /* Solo quita el fondo del contenedor principal del episodio */
+  body > div#wrap,
+  .wrapper,
+  .main,
+  #main {
+    background: transparent !important;
+  }
+
+  /* Evita que todo se vuelva blanco */
+  * {
+    background-color: inherit !important;
+  }
+}
+
+
+
+@-moz-document domain("github.com") {
+
+  /* Fondo global */
+  html, body {
+    background: transparent !important;
+  }
+
+  /* Contenedores principales */
+  body > div, 
+  .application-main,
+  .Header,
+  .header,
+  .repository-content,
+  .Layout-main {
+    background: transparent !important;
+  }
+
+  /* Todo hijo hereda transparencia */
+  * {
+    background-color: inherit !important;
+  }
+}
+
+
+@-moz-document domain("youtube.com") {
+
+  /* Fondo global transparente */
+  html, body, ytd-app {
+    background: transparent !important;
+  }
+
+  /* Contenedores principales */
+  #container, #content, #page-manager, #masthead-container, ytd-page-manager {
+    background: transparent !important;
+  }
+
+  /* Evita que todo se vuelva blanco */
+  * {
+    background-color: inherit !important;
+  }
+
+  /* Texto */
+  body, ytd-video-primary-info-renderer, ytd-comments {
+    color: #fff !important;
+  }
+}
+
+
+@-moz-document domain("reddit.com") {
+
+  /* Fondo global transparente */
+  html, body, #AppRouter-main-content, #2x-container {
+    background: transparent !important;
+  }
+
+  /* Contenedores principales */
+  ._1oQyIsiPHYt6nx7VOmd1sz, /* posts container */
+  ._3-miAEojrCvx_4FQ8x3P-s, /* main feed */
+  ._3g6l1h8i90oc4I1F_JZbnr /* sidebars */
+  {
+    background: transparent !important;
+  }
+
+  /* Evita que todo se vuelva blanco */
+  * {
+    background-color: inherit !important;
+  }
+
+  /* Texto */
+  body, h1, h2, h3, p, a, span {
+    color: #fff !important;
+  }
+}
+
+
+@-moz-document domain("pinterest.com") {
+
+  /* Fondo global */
+  html, body {
+    background: transparent !important;
+  }
+
+  /* Solo el fondo del feed / layout principal */
+  #__PWS_ROOT__ {
+    background: transparent !important;
+  }
+
+  /* El grid principal donde están los pines */
+  .gridCentered,
+  .gridContainer,
+  .Hsu,
+  .tBJ {
+    background: transparent !important;
+  }
+
+  /* NO tocamos paneles, menús, popups, ni overlays */
+}
+
+
+@-moz-document domain("roblox.com") {
+
+  /* Fondo global */
+  html, body {
+    background: transparent !important;
+  }
+
+  /* Contenedores principales (home, discover, avatar, profile) */
+  #container-main,
+  .container-main,
+  .content,
+  .page-content,
+  .section-content,
+  .games-list-container,
+  .game-grid,
+  .home-container,
+  .games-carousel,
+  .games-page,
+  .catalog-container {
+    background: transparent !important;
+  }
+
+  /* El grid de juegos */
+  .game-tile,
+  .game-card-container,
+  .game-card-thumb-container {
+    background: transparent !important;
+  }
+
+  /* NO tocamos modales ni paneles */
+  /* (Estos deben quedar opacos para que se lean bien) */
+}
+
