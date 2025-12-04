@@ -1,0 +1,204 @@
+:root {
+  --background: rgba(0, 0, 0, 0.0);
+  --background-alt: rgb(0, 0, 0);
+  --hover: rgba(255, 255, 255, 0.1);
+  --selected: rgba(255, 255, 255, 0.15);
+  --text: #ffffff;
+  --text-alt: #cccccc;
+  --urgent: #ff6b6b;
+}
+
+.swaync-notification-window,
+.swaync-control-center {
+  background: var(--background);
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.notification-background,
+.control-center,
+.widget-dnd,
+.widget-volume,
+.widget-backlight,
+.widget-buttons-grid,
+.widget-mpris,
+.widget-mpris-player,
+.mpris-overlay {
+  background: var(--background-alt);
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.notification-background {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  margin: 8px;
+  border-radius: 15px;
+}
+
+.notification-row .inline-reply-entry {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: var(--background-alt);
+}
+
+.notification-row .inline-reply-button {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: var(--hover);
+}
+
+.notification-row .inline-reply .inline-reply-button:hover {
+  background: var(--selected);
+}
+
+.notification .notification-content {
+  margin: 10px;
+}
+
+.notification-content .text-box {
+  margin: 0 0 0 15px;
+}
+
+.notification-content .time {
+  font-size: 0.95rem;
+  padding: 2px 0;
+  font-weight: 800;
+}
+
+.notification .summary {
+  font-weight: 800;
+  margin-bottom: 2px;
+  padding: 2px 0;
+  font-size: 1rem;
+}
+
+.notification .body {
+  color: var(--text-alt);
+  font-size: 0.8rem;
+}
+
+.notification.critical {
+  border-color: var(--urgent);
+}
+
+.notification.low progress,
+.notification.normal progress,
+.notification.critical progress {
+  background: var(--selected);
+}
+
+.notification-background .close-button {
+  margin: 6px;
+  padding: 2px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.notification-background .close-button:hover {
+  background: var(--hover);
+}
+
+.notification>*:last-child>* {
+  min-height: 3.2em;
+}
+
+.notification>*:last-child>* .notification-action {
+  background: var(--hover);
+  margin: 0 6px 9px 6px;
+  border-radius: 8px;
+}
+
+.notification>*:last-child>* .notification-action:hover,
+.notification>*:last-child>* .notification-action:active {
+  background: var(--selected);
+}
+
+.control-center {
+  margin: 5px;
+  padding: 12px;
+}
+
+.control-center .notification-background .close-button,
+.notification-group-close-button {
+  opacity: 0;
+}
+
+.notification-group {
+  margin: 0px 8px;
+}
+
+.notification-group-headers {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.notification-group-headers>label {
+  margin: 0 3px;
+  font-size: 1rem;
+}
+
+.notification-group-icon {
+  color: var(--text);
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: transparent;
+  color: var(--text);
+  margin: 4px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.notification-group-collapse-button:hover,
+.notification-group-close-all-button:hover {
+  background: var(--hover);
+}
+
+.widget-dnd,
+.widget-volume,
+.widget-backlight,
+.widget-buttons-grid,
+.widget-mpris,
+.widget-mpris-player {
+  background: var(--background-alt);
+  border-radius: 15px;
+}
+
+.widget-mpris-player .mpris-overlay>box:last-child {
+  border-radius: 16px;
+  padding: 0 5px;
+  background: var(--background-alt);
+}
+
+.widget-buttons-grid button {
+  margin: 3px;
+  border-radius: 15px;
+}
+
+.widget-buttons-grid button>label {
+  font-size: 16px;
+  color: var(--text);
+}
+
+.widget-buttons-grid button:hover {
+  background: var(--selected);
+}
+
+.widget-buttons-grid button:checked {
+  background-color: var(--text);
+}
+
+.widget-buttons-grid button:checked>label {
+  color: var(--background);
+}
+
+.control-center-list-placeholder {
+  color: var(--text);
+}
+
+.blank-window {
+  background: transparent;
+}

@@ -38,12 +38,19 @@
     // CPU / Memory
     "cpu": { "format": "{usage}%", "tooltip": false },
     "memory": { "format": "{}%" },
+  
 
-    // Temperature solo texto
+    // Temperature
     "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C"
+      "format": "{temperatureC}°C ",
+      "hwmon-path": [
+         "/sys/class/thermal/thermal_zone1/temp",
+          "/sys/class/thermal/thermal_zone3/temp"
+      ],
+    "critical-threshold": 80
     },
+
+
 
     // Network solo texto
     "network": {

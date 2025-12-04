@@ -1,0 +1,8 @@
+[color]
+background = 'default'
+foreground = '#FFFFFF'
+
+; gradient = 0
+gradient = 0
+
+horizontal_gradient = 0
