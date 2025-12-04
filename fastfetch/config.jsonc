@@ -27,8 +27,19 @@
     "battery",
     "poweradapter",
     "locale",
-    "break"
+    "break",
+    "Os Age"
   ],
+
+"customModules": [
+  {
+    "key": "OS Age",
+    "type": "command",
+    "keyColor": "white",
+    "text": "birth_install=$(stat -c %W /); current=$(date +%s); days=$(( (current - birth_install)/86400 )); echo ${days} days"
+  }
+],
+
 
   "logo": {
     "type": "auto",        
