@@ -1,6 +1,9 @@
 {
     "height": 30,
     "spacing": 4,
+    "margin-top": 2,
+    "margin-right": 2,
+    "margin-left":2, 
 
     "modules-left": [
         "hyprland/workspaces",
@@ -42,7 +45,7 @@
 
     // Temperature
     "temperature": {
-      "format": "{temperatureC}°C ",
+      "format": "{temperatureC}°C",
       "hwmon-path": [
          "/sys/class/thermal/thermal_zone1/temp",
           "/sys/class/thermal/thermal_zone3/temp"
@@ -106,7 +109,7 @@
     "format": "<span size='16pt'>{icon}</span>",
     "format-icons": {
       "notification": "󱅫 ",
-      "none": "󰂜 ",
+      "none": "󰂜",
       "dnd-notification": "󰂠 ",
       "dnd-none": "󰪓 ",
       "inhibited-notification": "󰂛 ",
