@@ -24,11 +24,11 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: rgba(0, 0, 0, 0.686);
+  background: rgba(63, 63, 63, 0.686);
 }
 
 #workspaces button.active {
-  background: rgba(0, 0, 0, 0.688);
+  background: rgba(42, 42, 42, 0.688);
   color: #ffffff;
 }
 
@@ -42,10 +42,10 @@ window#waybar {
 #pulseaudio,
 #battery,
 #temperature,
-#custom-notifications {
+#custom-notifications,
+#custom-media {
   background: rgba(0, 0, 0, 0.75);
   padding: 0 8px;
-  /* más compacto */
   margin: 0 3px;
   border-radius: 0;
 }
