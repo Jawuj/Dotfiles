@@ -7,8 +7,10 @@
 
     "modules-left": [
         "hyprland/workspaces",
-        "custom/media"
-//        "cava"
+        "custom/media",
+        "cava",
+        "mpd"
+
     ],
     "modules-center": [
         "clock"
