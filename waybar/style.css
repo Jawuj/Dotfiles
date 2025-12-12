@@ -1,4 +1,3 @@
-/* GLOBAL */
 * {
   font-family: "0xProto Nerd Font";
   font-size: 13px;
@@ -7,8 +6,7 @@
 
 window#waybar {
   background: transparent;
-
-  border-radius: 0;
+  border-radius: 0px;
   box-shadow: none;
   border: none;
 }
@@ -16,10 +14,9 @@ window#waybar {
 /* --- Workspaces --- */
 #workspaces button {
   background: rgba(0, 0, 0, 0.75);
-  color: #b0b0b0;
   padding: 0 6px;
   margin: 0 2px;
-  border-radius: 0;
+  border-radius: 0px;
   transition: 0.1s;
 }
 
@@ -47,7 +44,9 @@ window#waybar {
   background: rgba(0, 0, 0, 0.75);
   padding: 0 8px;
   margin: 0 3px;
-  border-radius: 0;
+  border-radius: 0px;
+  background-clip: padding-box;
+  border: 0;
 }
 
 /* Estados */

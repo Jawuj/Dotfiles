@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Listar workspaces activos
 hyprctl workspaces | awk '
 {
     ws = $2

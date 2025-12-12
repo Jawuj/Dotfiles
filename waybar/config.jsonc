@@ -8,7 +8,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/media"
-   //     "cava"
+//        "cava"
     ],
     "modules-center": [
         "clock"
@@ -55,7 +55,7 @@
 
 
 
-    // Network solo texto
+    // Network
     "network": {
         "format-wifi": "Home ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr}",
@@ -64,7 +64,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
 
-    // Pulseaudio simplificado
+    // Pulseaudio
     "pulseaudio": {
         "format": "{volume}% {format_source}",
         "format-bluetooth": "{volume}% {format_source}",
@@ -74,7 +74,7 @@
         "on-click": "pavucontrol"
     },
 
-    // Battery solo texto
+    // Battery
     "battery": {
         "states": { "warning": 30, "critical": 15 },
         "format": "{capacity}%",
@@ -148,7 +148,7 @@
         "actions": {
                    "on-click-right": "mode"
                    }
-    },
+    }
 
 }
 
