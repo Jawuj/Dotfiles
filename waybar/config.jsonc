@@ -7,7 +7,7 @@
 
     "modules-left": [
         "hyprland/workspaces",
-//       "custom/media",
+        "custom/media",
         "cava",
         "mpd"
 

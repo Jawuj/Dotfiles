@@ -1,84 +1,101 @@
+// Inspired by Catnap
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
-
-  "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "terminal",
-    "terminalfont",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
-    "battery",
-    "poweradapter",
-    "locale",
-    "break",
-    "Os Age"
-  ],
-
-"customModules": [
-  {
-    "key": "OS Age",
-    "type": "command",
-    "keyColor": "white",
-    "text": "birth_install=$(stat -c %W /); current=$(date +%s); days=$(( (current - birth_install)/86400 )); echo ${days} days"
-  }
-],
-
-
-  "logo": {
-    "type": "auto",        
-    "source": "arch",      
-    "padding": {
-      "top": 1,
-      "left": 1,
-      "right": 2
-    },
-    "color": {             
-      "1": "white",
-      "2": "white"
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "small",
+               "padding": {
+            "top": 3,
+            "left": 4
     }
-  },
 
-  "display": {
-    "separator": " ── .✦ ",     
-    "color": {
-        "keys": "white",
-        "title": "white"
     },
-    "key": {
-        "width": "auto",
-        "type": "string"
-    },
-    "bar": {
-        "char": {
-            "elapsed": "■",
-            "total": "-"
+    "modules": [
+        {
+            "key": " user",
+            "type": "title",
+            "format": "{user-name}",
+            "keyColor": "31"
+        },
+        {
+            "key": "󰇅 hname",
+            "type": "title",
+            "format": "{host-name}",
+            "keyColor": "32"
+
+        },
+        {
+            "key": "󰅐 uptime",
+            "type": "uptime",
+            "keyColor": "33"
+        },
+        {
+            "type": "command",
+            "key": "󰅐 Os Age",
+            "keyColor": "34",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
+        },
+        {
+            "key": "{icon} distro",
+            "type": "os",
+            "keyColor": "34"
+        },
+        {
+            "key": " kernel",
+            "type": "kernel",
+            "keyColor": "34"
+        },
+        {
+            "key": "󰇄 desktop",
+            "type": "de",
+            "keyColor": "36"
+        },
+        {
+            "key": " term",
+            "type": "terminal",
+            "keyColor": "31"
+        },
+        {
+            "key": " shell",
+            "type": "shell",
+            "keyColor": "32"
+        },
+        {
+            "key": "󰍛 cpu",
+            "type": "cpu",
+            "showPeCoreCount": true,
+            "keyColor": "33"
+        },
+        {
+            "key": "󰉉 disk",
+            "type": "disk",
+            "folders": "/",
+            "keyColor": "34"
+        },
+        {
+            "key": " memory",
+            "type": "memory",
+            "keyColor": "35"
+        },
+        {
+            "key": "󰩟 network",
+            "type": "localip",
+            "format": "{ipv4} ({ifname})",
+            "keyColor": "36"
+        },
+        {
+            "type": "command",
+            "key": "󰎆 music",
+           "keyColor": "39",
+           "text": "playerctl metadata --format '{{title}} — {{artist}}' 2>/dev/null || echo stopped"
+        },
+        {
+            "key": " colors",
+            "type": "colors",
+            "symbol": "circle",
+            "keyColor": "39"
         }
-    },
-    "percent": {
-        "type": 9,
-        "color": {
-            "green": "green",
-            "yellow": "light_yellow",
-            "red": "light_red"
-        }
-    }
-  }
+
+
+        
+    ]
 }
-
