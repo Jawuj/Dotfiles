@@ -7,7 +7,7 @@
 
     "modules-left": [
         "hyprland/workspaces",
-        "custom/media",
+//       "custom/media",
         "cava",
         "mpd"
 
@@ -93,31 +93,18 @@
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
     },
 
-    "custom/power": {
-        "format": "Power",
-        "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "shutdown": "shutdown",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
-    },
-
   "custom/notifications": {
     "tooltip": true,
     "format": "<span size='16pt'>{icon}</span>",
     "format-icons": {
       "notification": "󱅫 ",
       "none": "󰂜",
-      "dnd-notification": "󰂠 ",
-      "dnd-none": "󰪓 ",
-      "inhibited-notification": "󰂛 ",
-      "inhibited-none": "󰪑 ",
-      "dnd-inhibited-notification": "󰂛 ",
-      "dnd-inhibited-none": "󰪑 "
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -125,31 +112,6 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-},
-
-"cava": {
-        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-        "framerate": 30,
-        "autosens": 0,
-        "sensitivity":5,
-        "bars": 12,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "hide_on_silence": false,
-        // "format_silent": "quiet",
-        "method": "pulse",
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-        "bar_delimiter": 0,
-        "monstercat": false,
-        "waves": false,
-        "noise_reduction": 0.77,
-        "input_delay": 2,
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-        "actions": {
-                   "on-click-right": "mode"
-                   }
     }
 
 }
