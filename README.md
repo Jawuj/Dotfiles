@@ -7,7 +7,7 @@
   </tr>
   <tr>
     <td><img src="./Images/desktopwlogout.png" width="600"/></td>
-    <td></td>
+    <td><img src="./Images/desktoprmpc.png" width="600"/></td>
   </tr>
 </table>
 
@@ -48,4 +48,3 @@
 
 Starship
 https://github.com/commended
-
